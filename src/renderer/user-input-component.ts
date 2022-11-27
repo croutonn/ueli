@@ -26,7 +26,7 @@ export const userInputComponent = Vue.extend({
         keyPress(event: KeyboardEvent) {
             const ctrlOrMeta = event.ctrlKey || event.metaKey;
 
-            if (event.key === "ArrowUp" || (ctrlOrMeta && event.key.toLowerCase() === "p")) {
+            if (event.key === "ArrowUp" || (ctrlOrMeta && event.key.toLowerCase() === "k")) {
                 event.preventDefault();
                 if (event.shiftKey) {
                     vueEventDispatcher.$emit(VueEventChannels.selectInputHistoryItem, "previous");
@@ -35,7 +35,7 @@ export const userInputComponent = Vue.extend({
                 }
             }
 
-            if (event.key === "ArrowDown" || (ctrlOrMeta && event.key.toLowerCase() === "n")) {
+            if (event.key === "ArrowDown" || (ctrlOrMeta && event.key.toLowerCase() === "j")) {
                 event.preventDefault();
                 if (event.shiftKey) {
                     vueEventDispatcher.$emit(VueEventChannels.selectInputHistoryItem, "next");
